@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="naver-site-verification" content="018e14093369bf70600ec05d89491be7fd88408d" />
+<title>단위 변환기 | 길이·무게·온도·면적·속도 변환</title>
+<meta name="description" content="길이·무게·온도·면적·부피·속도·데이터 단위를 즉시 변환합니다. cm·인치·kg·파운드·℃·℉ 등 일상 단위 양방향 변환. 무료.">
+<meta name="keywords" content="단위 변환기, 단위 변환, cm 인치 변환, kg 파운드, 섭씨 화씨 변환, 단위계산기">
+<link rel="canonical" href="https://tools.agenticfabworks.com/unit/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="단위 변환기">
+<meta property="og:description" content="길이·무게·온도·면적·부피·속도·데이터 단위를 즉시 변환.">
+<meta property="og:url" content="https://tools.agenticfabworks.com/unit/">
+<meta name="twitter:card" content="summary">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLHB1RM91X"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZLHB1RM91X');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2566168559344675" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"단위 변환기","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"url":"https://tools.agenticfabworks.com/unit/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"1인치는 몇 cm인가요?","acceptedAnswer":{"@type":"Answer","text":"1인치는 2.54cm입니다. 반대로 1cm는 약 0.3937인치입니다."}},{"@type":"Question","name":"섭씨와 화씨는 어떻게 변환하나요?","acceptedAnswer":{"@type":"Answer","text":"화씨(℉) = 섭씨(℃) × 9/5 + 32 입니다. 예를 들어 36.5℃는 97.7℉입니다."}}]}
+</script>
+<link rel="stylesheet" href="../assets/tool.css">
+<style>
+  .seg{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;}
+  .seg button{background:var(--card2);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;transition:all .14s ease;}
+  .seg button.on{background:rgba(59,130,246,0.18);border-color:rgba(59,130,246,0.5);color:#cfe0ff;}
+  .conv-row{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px;}
+  .conv-cell label{display:block;font-size:13px;color:var(--muted);font-weight:600;margin-bottom:8px;}
+  .conv-cell .inputline select{flex:1;background:transparent;border:0;outline:0;color:var(--text);font-size:15px;font-weight:600;}
+  .conv-cell .inputline select option{background:#0d1626;color:var(--text);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <a class="brand" href="https://agenticfabworks.com/"><span class="dot"></span> AgenticFabWorks</a>
+    <a class="back" href="https://tools.agenticfabworks.com/">← 도구 모음</a>
+  </header>
+  <main>
+    <h1>단위 변환기</h1>
+    <p class="sub">길이·무게·온도·면적·부피·속도·데이터 단위를 즉시 변환합니다. 한쪽 값을 입력하면 다른 쪽이 자동 계산됩니다.</p>
+    <div class="panel">
+      <div class="field">
+        <label>변환 종류</label>
+        <div class="seg" id="catTabs"></div>
+      </div>
+      <div class="conv-row">
+        <div class="conv-cell">
+          <label>변환 전</label>
+          <div class="inputline"><input id="fromVal" type="text" inputmode="decimal" placeholder="값 입력"><select id="fromUnit"></select></div>
+        </div>
+        <div class="conv-cell">
+          <label>변환 후</label>
+          <div class="inputline"><input id="toVal" type="text" inputmode="decimal" placeholder="결과"><select id="toUnit"></select></div>
+        </div>
+      </div>
+    </div>
+    <!-- 광고는 AdSense 자동광고(head 스니펫)가 자동 배치. -->
+    <section class="info">
+      <h2>자주 쓰는 변환</h2>
+      <ul>
+        <li>1인치 = 2.54cm / 1피트 = 30.48cm / 1마일 = 1.609km</li>
+        <li>1kg = 2.205파운드 / 1온스 = 28.35g / 1근 = 600g</li>
+        <li>섭씨↔화씨: ℉ = ℃ × 9/5 + 32</li>
+        <li>1평 = 3.306㎡ / 1에이커 = 4047㎡</li>
+      </ul>
+      <p style="margin-top:8px;font-size:12px;">※ 일상 변환용 근사값입니다. 정밀 계측·거래에는 공인 환산을 확인하세요.</p>
+    </section>
+  </main>
+  <footer class="foot">© 2026 AgenticFabWorks · <a href="https://skct.agenticfabworks.com/privacy/">개인정보 처리 안내</a></footer>
+</div>
+<script src="./unit.js"></script>
+</body>
+</html>

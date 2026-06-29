@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="naver-site-verification" content="018e14093369bf70600ec05d89491be7fd88408d" />
+<title>환율 계산기 | 실시간 달러·엔·유로 환율 변환</title>
+<meta name="description" content="실시간 환율로 원화↔달러·엔화·유로·위안 등 주요 통화를 즉시 변환합니다. 매일 갱신되는 유럽중앙은행 기준 환율. 무료.">
+<meta name="keywords" content="환율 계산기, 실시간 환율, 달러 환율, 엔화 계산, 원달러 환율, 환율 변환">
+<link rel="canonical" href="https://tools.agenticfabworks.com/exchange/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="환율 계산기">
+<meta property="og:description" content="실시간 환율로 원화↔달러·엔·유로·위안을 즉시 변환.">
+<meta property="og:url" content="https://tools.agenticfabworks.com/exchange/">
+<meta name="twitter:card" content="summary">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLHB1RM91X"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZLHB1RM91X');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2566168559344675" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"환율 계산기","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"url":"https://tools.agenticfabworks.com/exchange/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"이 환율은 실시간인가요?","acceptedAnswer":{"@type":"Answer","text":"유럽중앙은행(ECB) 기준 환율로 매 영업일 1회 갱신됩니다. 은행 고시 환율이나 송금 적용 환율과는 차이가 있을 수 있습니다."}},{"@type":"Question","name":"송금/환전 시 이 환율이 그대로 적용되나요?","acceptedAnswer":{"@type":"Answer","text":"아닙니다. 실제 환전·송금에는 은행 스프레드와 수수료가 붙어 기준 환율과 달라집니다. 참고용으로 활용하세요."}}]}
+</script>
+<link rel="stylesheet" href="../assets/tool.css">
+<style>
+  .conv-row{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px;}
+  .conv-cell label{display:block;font-size:13px;color:var(--muted);font-weight:600;margin-bottom:8px;}
+  .inputline select{flex:1;background:transparent;border:0;outline:0;color:var(--text);font-size:15px;font-weight:700;}
+  .inputline select option{background:#0d1626;color:var(--text);}
+  .rate-note{margin-top:14px;font-size:13px;color:var(--muted);text-align:center;}
+  .rate-note strong{color:var(--cyan);}
+  .swap{display:flex;justify-content:center;margin:2px 0;}
+  .swap button{background:var(--card2);border:1px solid var(--line);color:var(--muted);border-radius:999px;width:38px;height:38px;cursor:pointer;font-size:16px;transition:all .14s ease;}
+  .swap button:hover{color:var(--text);border-color:var(--line-strong);transform:rotate(180deg);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <a class="brand" href="https://agenticfabworks.com/"><span class="dot"></span> AgenticFabWorks</a>
+    <a class="back" href="https://tools.agenticfabworks.com/">← 도구 모음</a>
+  </header>
+  <main>
+    <h1>환율 계산기</h1>
+    <p class="sub">실시간 기준 환율로 주요 통화를 즉시 변환합니다. 한쪽 값을 입력하면 다른 쪽이 자동 계산됩니다.</p>
+    <div class="panel">
+      <div class="conv-row">
+        <div class="conv-cell">
+          <label>변환 전</label>
+          <div class="inputline"><input id="fromVal" type="text" inputmode="decimal" placeholder="금액 입력"><select id="fromCur"></select></div>
+        </div>
+        <div class="swap"><button type="button" id="swapBtn" title="통화 교환">⇅</button></div>
+        <div class="conv-cell">
+          <label>변환 후</label>
+          <div class="inputline"><input id="toVal" type="text" inputmode="decimal" placeholder="결과"><select id="toCur"></select></div>
+        </div>
+      </div>
+      <div class="rate-note" id="rateNote">환율을 불러오는 중...</div>
+    </div>
+    <!-- 광고는 AdSense 자동광고(head 스니펫)가 자동 배치. -->
+    <section class="info">
+      <h2>이 환율은 실시간인가요?</h2>
+      <p>유럽중앙은행(ECB) 공개 데이터 기준 환율로, 매 영업일 갱신됩니다. 은행 고시 환율·송금 적용 환율과는 차이가 있을 수 있습니다.</p>
+      <h2>실제 환전에도 이 환율이 적용되나요?</h2>
+      <p>아닙니다. 실제 환전·해외송금에는 은행 스프레드와 수수료가 더해져 기준 환율과 달라집니다. 이 도구는 참고용입니다.</p>
+    </section>
+  </main>
+  <footer class="foot">© 2026 AgenticFabWorks · <a href="https://skct.agenticfabworks.com/privacy/">개인정보 처리 안내</a></footer>
+</div>
+<script src="./exchange.js"></script>
+</body>
+</html>
