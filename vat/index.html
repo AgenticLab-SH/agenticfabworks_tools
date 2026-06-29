@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="naver-site-verification" content="018e14093369bf70600ec05d89491be7fd88408d" />
+<title>부가세 계산기 | 공급가액·합계금액 부가가치세</title>
+<meta name="description" content="공급가액 또는 합계금액을 입력하면 부가가치세(10%)를 자동 계산합니다. 부가세 포함·별도 양방향 계산. 무료.">
+<meta name="keywords" content="부가세 계산기, 부가가치세 계산, 공급가액, 부가세 포함, VAT 계산">
+<link rel="canonical" href="https://tools.agenticfabworks.com/vat/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="부가세 계산기">
+<meta property="og:description" content="공급가액·합계금액 부가가치세 10% 양방향 자동 계산.">
+<meta property="og:url" content="https://tools.agenticfabworks.com/vat/">
+<meta name="twitter:card" content="summary">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLHB1RM91X"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZLHB1RM91X');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2566168559344675" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"부가세 계산기","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"url":"https://tools.agenticfabworks.com/vat/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"부가세는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"부가가치세는 공급가액의 10%입니다. 합계금액(부가세 포함)에서 공급가액을 구하려면 합계금액을 1.1로 나누고, 부가세는 합계금액에서 공급가액을 뺍니다."}},{"@type":"Question","name":"합계금액 11,000원의 공급가액과 부가세는?","acceptedAnswer":{"@type":"Answer","text":"공급가액 10,000원, 부가세 1,000원입니다. 합계금액을 1.1로 나누면 공급가액이 나옵니다."}}]}
+</script>
+<link rel="stylesheet" href="../assets/tool.css">
+<style>
+  .seg{display:flex;gap:8px;margin-top:4px;}
+  .seg button{flex:1;background:#0a1226;border:1px solid var(--line);color:var(--muted);border-radius:10px;padding:10px;font-size:13px;font-weight:700;cursor:pointer;}
+  .seg button.on{background:rgba(59,130,246,0.18);border-color:rgba(59,130,246,0.5);color:#cfe0ff;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <a class="brand" href="https://agenticfabworks.com/"><span class="dot"></span> AgenticFabWorks</a>
+    <a class="back" href="https://tools.agenticfabworks.com/">← 도구 모음</a>
+  </header>
+  <main>
+    <h1>부가세 계산기</h1>
+    <p class="sub">부가가치세(10%)를 자동 계산합니다. 입력 금액이 <strong>공급가액</strong>인지 <strong>합계금액(부가세 포함)</strong>인지 선택하세요.</p>
+    <section class="panel">
+      <div class="field">
+        <label>입력 기준</label>
+        <div class="seg">
+          <button type="button" id="mSupply" class="on" data-mode="supply">공급가액 입력</button>
+          <button type="button" id="mTotal" data-mode="total">합계금액 입력</button>
+        </div>
+      </div>
+      <div class="field2">
+        <label for="amount" id="amountLabel">공급가액 (부가세 별도)</label>
+        <div class="inputline"><input id="amount" type="text" inputmode="numeric" placeholder="예: 1,000,000"><span class="unit">원</span></div>
+      </div>
+    </section>
+    <section class="result" id="result" hidden>
+      <div class="result-main">
+        <span class="result-label">부가세 (10%)</span>
+        <span class="result-value" id="vat">-</span>
+      </div>
+      <div class="result-grid">
+        <div><span>공급가액</span><strong id="supply">-</strong></div>
+        <div><span>부가세</span><strong id="vat2">-</strong></div>
+        <div><span>합계금액</span><strong id="total">-</strong></div>
+      </div>
+      <p class="disclaimer">※ 일반과세 부가가치세율 10% 기준입니다. 면세·영세율·간이과세 등 특수 과세는 별도이며, 세금계산서 발행은 국세청 기준을 따릅니다.</p>
+    </section>
+    <!-- 광고는 AdSense 자동광고(head 스니펫)가 자동 배치. -->
+    <section class="info">
+      <h2>부가세는 어떻게 계산하나요?</h2>
+      <p>부가가치세는 공급가액의 10%입니다. 합계금액(부가세 포함)에서 공급가액을 구하려면 합계금액을 1.1로 나누고, 부가세는 합계금액에서 공급가액을 뺀 값입니다.</p>
+      <h2>예시: 합계 11,000원이면?</h2>
+      <p>공급가액 10,000원, 부가세 1,000원입니다. (11,000 ÷ 1.1 = 10,000)</p>
+    </section>
+  </main>
+  <footer class="foot">© 2026 AgenticFabWorks · <a href="https://skct.agenticfabworks.com/privacy/">개인정보 처리 안내</a></footer>
+</div>
+<script src="./vat.js"></script>
+</body>
+</html>
