@@ -77,3 +77,10 @@ h1{font-size:clamp(25px,4.5vw,33px);font-weight:800;letter-spacing:-0.8px;line-h
 .dday-card .del{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:12px;transition:all .14s ease;}
 .dday-card .del:hover{color:var(--bad);border-color:rgba(248,113,113,0.4);}
 @media(max-width:520px){.result-grid{grid-template-columns:1fr;}}
+
+/* 관련 도구 내부 링크 */
+.related-tools{margin-top:34px;}
+.related-tools h2{font-size:15px;font-weight:700;color:var(--muted);margin-bottom:12px;letter-spacing:-0.2px;}
+.rt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;}
+.rt-grid a{display:flex;align-items:center;gap:8px;background:var(--card2);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px;color:var(--text);text-decoration:none;font-size:14px;font-weight:600;transition:all .14s ease;}
+.rt-grid a:hover{border-color:var(--ring);background:rgba(56,189,248,0.06);transform:translateY(-1px);}
