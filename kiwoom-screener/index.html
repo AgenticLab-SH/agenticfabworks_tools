@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="naver-site-verification" content="018e14093369bf70600ec05d89491be7fd88408d" />
+<title>키움 조건검색식 항목 가이드 | 조건검색 설정 사전</title>
+<meta name="description" content="키움증권 조건검색식의 전체 항목(범위지정·시세분석·기술적분석·패턴분석·재무분석·순위분석)을 카테고리별로 정리한 가이드. 검색으로 원하는 조건을 바로 찾으세요. 무료.">
+<meta name="keywords" content="키움 조건검색, 조건검색식, 키움증권 조건식, 조건검색 설정, 주식 종목 검색식">
+<link rel="canonical" href="https://tools.agenticfabworks.com/kiwoom-screener/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="키움 조건검색식 항목 가이드">
+<meta property="og:description" content="키움 조건검색식 전체 항목을 카테고리별로 정리. 검색으로 바로 찾기.">
+<meta property="og:url" content="https://tools.agenticfabworks.com/kiwoom-screener/">
+<meta name="twitter:card" content="summary">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLHB1RM91X"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZLHB1RM91X');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2566168559344675" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"키움 조건검색식 항목 가이드","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"url":"https://tools.agenticfabworks.com/kiwoom-screener/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"키움 조건검색식은 어떤 항목으로 구성되나요?","acceptedAnswer":{"@type":"Answer","text":"크게 범위지정, 시세분석, 기술적분석, 패턴분석, 재무분석, 순위분석 6개 대분류로 나뉘며, 각 분류 아래 세부 조건 항목이 있습니다."}},{"@type":"Question","name":"조건검색에서 단기 매매 신호는 어디서 찾나요?","acceptedAnswer":{"@type":"Answer","text":"시세분석(가격조건·거래량·호가잔량)과 기술적분석(이동평균·모멘텀지표) 항목을 활용하면 단기 매매 신호와 모멘텀을 필터링할 수 있습니다."}}]}
+</script>
+<link rel="stylesheet" href="../assets/tool.css">
+<style>
+  .ks-search{margin-top:20px;}
+  .ks-search input{width:100%;background:#0a1226;border:1px solid var(--line);border-radius:12px;color:var(--text);font-size:16px;padding:14px 16px;outline:none;}
+  .ks-count{color:var(--muted);font-size:13px;margin:12px 0 4px;}
+  .ks-group{margin-top:22px;}
+  .ks-group-title{font-size:18px;font-weight:800;color:#cfe0ff;display:flex;align-items:center;gap:8px;}
+  .ks-group-desc{color:var(--muted);font-size:13px;margin:4px 0 12px;}
+  .ks-items{display:grid;gap:10px;}
+  .ks-item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;}
+  .ks-item h4{font-size:15px;font-weight:700;margin-bottom:5px;}
+  .ks-item p{color:var(--muted);font-size:13px;line-height:1.55;}
+  .ks-item .hint{color:#7dd3fc;font-size:12px;margin-top:6px;}
+  mark{background:rgba(34,211,238,0.3);color:#e8eefb;border-radius:3px;padding:0 2px;}
+  .ks-empty{color:var(--muted);text-align:center;padding:30px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <a class="brand" href="https://agenticfabworks.com/"><span class="dot"></span> AgenticFabWorks</a>
+    <a class="back" href="https://tools.agenticfabworks.com/">← 도구 모음</a>
+  </header>
+  <main>
+    <h1>키움 조건검색식 항목 가이드</h1>
+    <p class="sub">키움증권 조건검색식의 전체 항목을 카테고리별로 정리했습니다. 검색어를 입력하면 원하는 조건을 바로 찾을 수 있습니다.</p>
+    <div class="ks-search"><input id="ksSearch" type="text" placeholder="예: 거래량, 이동평균, 외국인, 캔들 패턴..." autocomplete="off"></div>
+    <div class="ks-count" id="ksCount"></div>
+    <div id="ksList"></div>
+    <!-- 광고는 AdSense 자동광고(head 스니펫)가 자동 배치. -->
+    <section class="info">
+      <h2>키움 조건검색식이란?</h2>
+      <p>키움증권 영웅문의 조건검색은 원하는 조건을 조합해 종목을 자동으로 걸러내는 기능입니다. 항목은 범위지정·시세분석·기술적분석·패턴분석·재무분석·순위분석 6개 대분류로 나뉩니다.</p>
+      <h2>이 가이드 활용법</h2>
+      <p>위 검색창에 "거래량", "이동평균", "외국인" 같은 키워드를 넣으면 관련 조건 항목과 활용 팁을 바로 볼 수 있습니다. 어떤 항목이 무슨 용도인지 빠르게 파악해 나만의 조건검색식을 설계하세요.</p>
+      <p style="margin-top:10px;font-size:12px;">※ 본 자료는 항목 분류·설명 참고용 가이드이며 키움증권 공식 매뉴얼이 아닙니다. 투자 권유가 아니며 실제 화면 항목명은 버전에 따라 다를 수 있습니다.</p>
+    </section>
+  </main>
+  <footer class="foot">© 2026 AgenticFabWorks · <a href="https://skct.agenticfabworks.com/privacy/">개인정보 처리 안내</a></footer>
+</div>
+<script src="./data.js"></script>
+<script src="./screener.js"></script>
+</body>
+</html>
