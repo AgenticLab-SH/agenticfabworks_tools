@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="naver-site-verification" content="018e14093369bf70600ec05d89491be7fd88408d" />
+<title>손실 복구 계산기 | 본전 회복 필요 수익률</title>
+<meta name="description" content="주식·코인 손실률을 입력하면 본전 회복에 필요한 수익률을 계산합니다. -50%면 +100%가 필요한 손실의 비대칭을 한눈에. 무료.">
+<meta name="keywords" content="손실 복구 계산기, 본전 수익률, 손실률 회복, 주식 손실 복구, 원금 회복">
+<link rel="canonical" href="https://tools.agenticfabworks.com/recovery/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="손실 복구 계산기">
+<meta property="og:description" content="손실률을 입력하면 본전 회복에 필요한 수익률을 계산. 손실의 비대칭.">
+<meta property="og:url" content="https://tools.agenticfabworks.com/recovery/">
+<meta name="twitter:card" content="summary">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLHB1RM91X"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZLHB1RM91X');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2566168559344675" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"손실 복구 계산기","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"url":"https://tools.agenticfabworks.com/recovery/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"50% 손실이면 몇 % 올라야 본전인가요?","acceptedAnswer":{"@type":"Answer","text":"50% 손실 후 본전을 회복하려면 100% 상승이 필요합니다. 손실과 회복 수익률은 비대칭이라 손실이 클수록 회복에 필요한 수익률이 급격히 커집니다."}},{"@type":"Question","name":"본전 회복 수익률은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"필요 수익률(%) = 손실률 ÷ (100 - 손실률) × 100 입니다. 예를 들어 20% 손실이면 20 ÷ 80 × 100 = 25%가 필요합니다."}}]}
+</script>
+<link rel="stylesheet" href="../assets/tool.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <a class="brand" href="https://agenticfabworks.com/"><span class="dot"></span> AgenticFabWorks</a>
+    <a class="back" href="https://tools.agenticfabworks.com/">← 도구 모음</a>
+  </header>
+  <main>
+    <h1>손실 복구 계산기</h1>
+    <p class="sub">손실률을 입력하면 <strong>본전 회복에 필요한 수익률</strong>을 계산합니다. 손실이 클수록 회복은 훨씬 어렵습니다.</p>
+    <section class="panel">
+      <div class="field">
+        <label for="loss">손실률</label>
+        <div class="inputline"><input id="loss" type="text" inputmode="decimal" placeholder="예: 30"><span class="unit">%</span></div>
+      </div>
+      <div class="field2">
+        <label for="amount">현재 평가금액 (선택)</label>
+        <div class="inputline"><input id="amount" type="text" inputmode="numeric" placeholder="예: 7,000,000"><span class="unit">원</span></div>
+      </div>
+    </section>
+    <section class="result" id="result" hidden>
+      <div class="result-main">
+        <span class="result-label">본전 회복에 필요한 수익률</span>
+        <span class="result-value" id="need">-</span>
+      </div>
+      <div class="result-grid">
+        <div><span>손실률</span><strong id="lossOut">-</strong></div>
+        <div><span>현재 → 본전 금액</span><strong id="amountOut">-</strong></div>
+        <div><span>본전 대비 현재</span><strong id="ratioOut">-</strong></div>
+      </div>
+      <p class="disclaimer">※ 단순 수익률 계산입니다. 매매 수수료·세금·물가는 반영하지 않습니다.</p>
+    </section>
+    <!-- 광고는 AdSense 자동광고(head 스니펫)가 자동 배치. -->
+    <section class="info">
+      <h2>손실과 회복은 왜 비대칭인가요?</h2>
+      <p>본전 회복 수익률(%) = <strong>손실률 ÷ (100 − 손실률) × 100</strong> 입니다. 100만원이 50% 빠지면 50만원이 되고, 다시 100만원이 되려면 50만원에서 +100%가 필요합니다. 손실이 커질수록 회복 난이도가 급격히 올라갑니다.</p>
+      <h2>손실률별 필요 수익률</h2>
+      <ul>
+        <li>−10% → +11.1%</li>
+        <li>−20% → +25%</li>
+        <li>−30% → +42.9%</li>
+        <li>−50% → +100%</li>
+        <li>−70% → +233%</li>
+        <li>−90% → +900%</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="foot">© 2026 AgenticFabWorks · <a href="https://skct.agenticfabworks.com/privacy/">개인정보 처리 안내</a></footer>
+</div>
+<script src="./recovery.js"></script>
+</body>
+</html>
