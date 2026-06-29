@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="naver-site-verification" content="018e14093369bf70600ec05d89491be7fd88408d" />
+<title>주식 평단가 계산기 | 물타기 평균단가·수익률</title>
+<meta name="description" content="보유 주식에 추가 매수(물타기) 시 평균단가와 총 수익률을 즉시 계산. 목표 평단가에 필요한 추가 매수 수량도 계산합니다. 무료.">
+<meta name="keywords" content="평단가 계산기, 물타기 계산기, 주식 평균단가, 평균매입단가, 주식 수익률 계산">
+<link rel="canonical" href="https://tools.agenticfabworks.com/average/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="주식 평단가 계산기">
+<meta property="og:description" content="물타기 평균단가와 수익률을 즉시 계산. 목표 평단가 추가 매수량도.">
+<meta property="og:url" content="https://tools.agenticfabworks.com/average/">
+<meta name="twitter:card" content="summary">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLHB1RM91X"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZLHB1RM91X');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2566168559344675" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"주식 평단가 계산기","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"url":"https://tools.agenticfabworks.com/average/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"물타기 후 평균단가는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"(기존 매입금액 + 추가 매입금액)을 (기존 수량 + 추가 수량)으로 나눕니다. 즉 총 투자금액을 총 보유 수량으로 나눈 값이 평균단가입니다."}},{"@type":"Question","name":"목표 평단가를 맞추려면 얼마를 더 사야 하나요?","acceptedAnswer":{"@type":"Answer","text":"현재가가 목표 평단가보다 낮을 때만 가능합니다. 이 계산기에 목표 평단가를 입력하면 필요한 추가 매수 수량을 계산해 줍니다."}}]}
+</script>
+<link rel="stylesheet" href="../assets/tool.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <a class="brand" href="https://agenticfabworks.com/"><span class="dot"></span> AgenticFabWorks</a>
+    <a class="back" href="https://tools.agenticfabworks.com/">← 도구 모음</a>
+  </header>
+  <main>
+    <h1>주식 평단가 계산기</h1>
+    <p class="sub">보유 주식에 추가 매수(물타기)했을 때 <strong>평균단가</strong>와 <strong>수익률</strong>을 즉시 계산합니다.</p>
+    <section class="panel">
+      <div class="field">
+        <label for="qty1">기존 보유 수량</label>
+        <div class="inputline"><input id="qty1" type="text" inputmode="numeric" placeholder="예: 100"><span class="unit">주</span></div>
+      </div>
+      <div class="field2">
+        <label for="price1">기존 평균단가</label>
+        <div class="inputline"><input id="price1" type="text" inputmode="numeric" placeholder="예: 70,000"><span class="unit">원</span></div>
+      </div>
+      <div class="field2">
+        <label for="qty2">추가 매수 수량</label>
+        <div class="inputline"><input id="qty2" type="text" inputmode="numeric" placeholder="예: 50"><span class="unit">주</span></div>
+      </div>
+      <div class="field2">
+        <label for="price2">추가 매수 단가</label>
+        <div class="inputline"><input id="price2" type="text" inputmode="numeric" placeholder="예: 60,000"><span class="unit">원</span></div>
+      </div>
+      <div class="field2">
+        <label for="cur">현재가 (수익률 계산용, 선택)</label>
+        <div class="inputline"><input id="cur" type="text" inputmode="numeric" placeholder="예: 65,000"><span class="unit">원</span></div>
+      </div>
+    </section>
+    <section class="result" id="result" hidden>
+      <div class="result-main">
+        <span class="result-label">평균단가</span>
+        <span class="result-value" id="avg">-</span>
+      </div>
+      <div class="result-grid">
+        <div><span>총 보유 수량</span><strong id="totQty">-</strong></div>
+        <div><span>총 매입금액</span><strong id="totCost">-</strong></div>
+        <div><span>평가 수익률</span><strong id="roi">-</strong></div>
+      </div>
+      <p class="disclaimer">※ 매매 수수료·세금·환율은 반영하지 않은 단순 평균단가입니다. 실제 체결가·비용은 증권사 화면을 기준으로 하세요.</p>
+    </section>
+    <!-- 광고는 AdSense 자동광고(head 스니펫)가 자동 배치. -->
+    <section class="info">
+      <h2>물타기 후 평균단가는 어떻게 계산하나요?</h2>
+      <p>(기존 매입금액 + 추가 매입금액)을 (기존 수량 + 추가 수량)으로 나눕니다. 즉 총 투자금액 ÷ 총 보유 수량이 평균단가입니다.</p>
+      <h2>평가 수익률은요?</h2>
+      <p>(현재가 - 평균단가) ÷ 평균단가 × 100 으로 계산합니다. 현재가가 평균단가보다 높으면 +, 낮으면 -로 표시됩니다.</p>
+    </section>
+  </main>
+  <footer class="foot">© 2026 AgenticFabWorks · <a href="https://skct.agenticfabworks.com/privacy/">개인정보 처리 안내</a></footer>
+</div>
+<script src="./average.js"></script>
+</body>
+</html>
