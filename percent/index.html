@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="naver-site-verification" content="018e14093369bf70600ec05d89491be7fd88408d" />
+<title>퍼센트 계산기 | 비율·할인·증감률 계산</title>
+<meta name="description" content="전체의 몇 %, 부분이 전체의 몇 %, 할인가, 증감률(변화율)을 한 번에 계산하는 퍼센트 계산기. 무료.">
+<meta name="keywords" content="퍼센트 계산기, 비율 계산, 할인 계산, 증감률, 백분율 계산">
+<link rel="canonical" href="https://tools.agenticfabworks.com/percent/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="퍼센트 계산기">
+<meta property="og:description" content="비율·할인가·증감률을 한 번에 계산하는 퍼센트 계산기.">
+<meta property="og:url" content="https://tools.agenticfabworks.com/percent/">
+<meta name="twitter:card" content="summary">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLHB1RM91X"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZLHB1RM91X');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2566168559344675" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"퍼센트 계산기","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"url":"https://tools.agenticfabworks.com/percent/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"전체의 몇 퍼센트는 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"전체 × (퍼센트 ÷ 100)입니다. 예를 들어 50,000원의 20%는 50,000 × 0.2 = 10,000원입니다."}},{"@type":"Question","name":"증감률(변화율)은 어떻게 구하나요?","acceptedAnswer":{"@type":"Answer","text":"(나중 값 - 처음 값) ÷ 처음 값 × 100입니다. 값이 늘면 +, 줄면 -로 표시됩니다."}}]}
+</script>
+<link rel="stylesheet" href="../assets/tool.css">
+<style>
+  .pc-block{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-top:14px;}
+  .pc-block h3{font-size:15px;font-weight:700;margin-bottom:10px;color:#cfe0ff;}
+  .pc-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+  .pc-row input{flex:1;min-width:90px;background:#0a1226;border:1px solid var(--line);border-radius:10px;color:var(--text);padding:11px 12px;font-size:15px;font-weight:700;outline:none;}
+  .pc-row span{color:var(--muted);font-size:14px;}
+  .pc-out{margin-top:10px;font-size:15px;font-weight:800;color:var(--cyan);min-height:22px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <a class="brand" href="https://agenticfabworks.com/"><span class="dot"></span> AgenticFabWorks</a>
+    <a class="back" href="https://tools.agenticfabworks.com/">← 도구 모음</a>
+  </header>
+  <main>
+    <h1>퍼센트 계산기</h1>
+    <p class="sub">비율, 할인가, 증감률을 한 번에 계산합니다. 입력하면 바로 결과가 나옵니다.</p>
+
+    <div class="pc-block">
+      <h3>① 전체의 몇 %</h3>
+      <div class="pc-row">
+        <input id="a1" type="text" inputmode="decimal" placeholder="전체"><span>의</span>
+        <input id="a2" type="text" inputmode="decimal" placeholder="%"><span>% =</span>
+      </div>
+      <div class="pc-out" id="aOut"></div>
+    </div>
+
+    <div class="pc-block">
+      <h3>② 부분은 전체의 몇 %</h3>
+      <div class="pc-row">
+        <input id="b1" type="text" inputmode="decimal" placeholder="부분"><span>은</span>
+        <input id="b2" type="text" inputmode="decimal" placeholder="전체"><span>의 ? %</span>
+      </div>
+      <div class="pc-out" id="bOut"></div>
+    </div>
+
+    <div class="pc-block">
+      <h3>③ 할인가 (정가에서 % 할인)</h3>
+      <div class="pc-row">
+        <input id="c1" type="text" inputmode="decimal" placeholder="정가"><span>에서</span>
+        <input id="c2" type="text" inputmode="decimal" placeholder="할인 %"><span>% 할인</span>
+      </div>
+      <div class="pc-out" id="cOut"></div>
+    </div>
+
+    <div class="pc-block">
+      <h3>④ 증감률 (처음 → 나중)</h3>
+      <div class="pc-row">
+        <input id="d1" type="text" inputmode="decimal" placeholder="처음 값"><span>→</span>
+        <input id="d2" type="text" inputmode="decimal" placeholder="나중 값">
+      </div>
+      <div class="pc-out" id="dOut"></div>
+    </div>
+
+    <!-- 광고는 AdSense 자동광고(head 스니펫)가 자동 배치. -->
+    <section class="info">
+      <h2>퍼센트 계산 공식</h2>
+      <ul>
+        <li>전체의 몇 % = 전체 × (% ÷ 100)</li>
+        <li>부분의 비율 = 부분 ÷ 전체 × 100</li>
+        <li>할인가 = 정가 × (1 − 할인% ÷ 100)</li>
+        <li>증감률 = (나중 − 처음) ÷ 처음 × 100</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="foot">© 2026 AgenticFabWorks · <a href="https://skct.agenticfabworks.com/privacy/">개인정보 처리 안내</a></footer>
+</div>
+<script src="./percent.js"></script>
+</body>
+</html>
