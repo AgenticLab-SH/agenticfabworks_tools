@@ -9,4 +9,6 @@
   <url><loc>https://tools.agenticfabworks.com/compound/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://tools.agenticfabworks.com/loan/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://tools.agenticfabworks.com/vat/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tools.agenticfabworks.com/severance/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tools.agenticfabworks.com/bmi/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>
