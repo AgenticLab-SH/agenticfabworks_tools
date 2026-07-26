@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="refresh" content="0; url=https://tools.agenticfabworks.com/">
+  <link rel="canonical" href="https://tools.agenticfabworks.com/">
+  <title>AgenticFabWorks Tools로 이동</title>
+</head>
+<body>
+  <p><a href="https://tools.agenticfabworks.com/">AgenticFabWorks Tools로 이동</a></p>
+  <script>
+    const base = "/agenticfabworks_tools";
+    const path = location.pathname.startsWith(base)
+      ? location.pathname.slice(base.length) || "/"
+      : "/";
+    location.replace(`https://tools.agenticfabworks.com${path}${location.search}${location.hash}`);
+  </script>
+</body>
+</html>
